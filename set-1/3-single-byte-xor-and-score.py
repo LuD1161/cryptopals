@@ -31,5 +31,5 @@ for char in string.printable: # should use range(256) instead of string.printabl
 
 maxScore = max(scores)
 possibleKeys = [index for index, value in enumerate(scores) if value == maxScore]
-for key in possibleKeys:    
+for key in possibleKeys:
     print("Key {0} - {1}".format(string.printable[key], xorFixed((string.printable[key]*lenGivString).encode("utf-8", errors="strict"), decodeHex(givenString))))
